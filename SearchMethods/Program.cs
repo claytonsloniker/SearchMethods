@@ -72,7 +72,8 @@ namespace SearchMethods
                             traversed = dfs.Execute(cityPairs, cityCoordinates, startingTown, destinationTown);
                             break;
                         case "3":
-                            Console.WriteLine("ID-DFS Search");
+                            var iddfs = new IDDFSearch();
+                            traversed = iddfs.Execute(cityPairs, cityCoordinates, startingTown, destinationTown);
                             break;
                         case "4":
                             Console.WriteLine("Best First Search");
