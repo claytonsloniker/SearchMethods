@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// REFERENCE: https://www.geeksforgeeks.org/iterative-depth-first-traversal/
 
 namespace SearchMethods
 {

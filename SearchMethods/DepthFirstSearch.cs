@@ -1,4 +1,6 @@
-﻿namespace SearchMethods
+﻿// REFERENCE: https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
+
+namespace SearchMethods
 {
     public class DepthFirstSearch()
     {

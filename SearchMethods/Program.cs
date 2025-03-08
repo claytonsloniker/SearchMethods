@@ -76,10 +76,12 @@ namespace SearchMethods
                             traversed = iddfs.Execute(cityPairs, cityCoordinates, startingTown, destinationTown);
                             break;
                         case "4":
-                            Console.WriteLine("Best First Search");
+                            var bestFirstSearch = new BestFirstSearch();
+                            traversed = bestFirstSearch.Execute(cityPairs, cityCoordinates, startingTown, destinationTown);
                             break;
                         case "5":
-                            Console.WriteLine("A* Search");
+                            var aStarSearch = new AStarSearch();
+                            traversed = aStarSearch.Execute(cityPairs, cityCoordinates, startingTown, destinationTown);
                             break;
                         case "6":
                             Console.WriteLine("Exiting...");
@@ -106,7 +108,10 @@ namespace SearchMethods
                         Distance distanceCalculator = new Distance();
                         double totalDistance = distanceCalculator.CalculateTotalDistance(traversed, cityCoordinates);
                         Console.WriteLine($"Total Distance: {totalDistance:0.00} km");
-                        Console.WriteLine($"Total Time: {stopwatch.ElapsedMilliseconds} ms");
+
+                        // Convert elapsed time to milliseconds
+                        double elapsedMilliseconds = stopwatch.Elapsed.TotalMilliseconds;
+                        Console.WriteLine($"Total Time: {elapsedMilliseconds} ms");
                     }
                 }
                 catch (Exception ex)
